@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Sirin+Stencil&display=swap');
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
-    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Sirin Stencil', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
+  color: #fff;
 }
 
 * {
@@ -11,7 +14,7 @@ body {
 }
 
 main {
-  padding: 5rem 0;
+  padding: 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -32,4 +35,5 @@ code {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: #000;
 }
