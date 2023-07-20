@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Header from 'components/Header';
 import Background from '@components/Background';
 import Socials from '@components/Socials';
+import NewsLetterSignUpForm from '@components/NewsletterSignupForm';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
 
         <div style={{ paddingLeft: 30 }}>
           <Socials />
+          <NewsLetterSignUpForm />
         </div>
         <h1
           style={{
