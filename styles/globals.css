@@ -1,25 +1,9 @@
 @import 'node_modules/modern-normalize/modern-normalize.css';
 
-@import url('https://fonts.googleapis.com/css2?family=Rubik+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Changa+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
-
 html,
 body {
   padding: 0;
   margin: 0;
-  /* font-family: 'Rubik One', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-    sans-serif; */
-  /* font-family: 'Rubik 80s Fade', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-    sans-serif; */
-  /* font-family: 'Changa One', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-    sans-serif; */
-  font-family: 'Passion One', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-    sans-serif;
-  /* font-family: 'Bungee', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-    sans-serif; */
   color: #fff;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
