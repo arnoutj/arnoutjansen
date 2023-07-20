@@ -12,7 +12,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <Header title="arnout jansen" />
+        <Header title="Arnout Jansen" />
 
         <div style={{ paddingLeft: 30 }}>
           <Socials />
@@ -23,7 +23,7 @@ export default function Home() {
             bottom: '5%',
             left: '50%',
             transform: 'translate3d(-50%, 0, 0)',
-            fontSize: 60,
+            fontSize: 40,
             color: '#FDFF90',
             textAlign: 'center',
             marginBottom: 30,

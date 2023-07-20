@@ -16,7 +16,7 @@ export default function Socials() {
       }}
     >
       <Image priority src={instagramIcon} alt="Follow me on Instagram" />
-      <span style={{ paddingLeft: 10, marginTop: -4 }}>follow me</span>
+      <span style={{ paddingLeft: 10 }}>Follow me</span>
     </Link>
   );
 }
