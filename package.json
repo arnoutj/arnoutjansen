@@ -8,7 +8,6 @@
     "export": "next export"
   },
   "dependencies": {
-    "@next/font": "^13.4.10",
     "cypress": "^10.0.3",
     "isomorphic-unfetch": "^4.0.2",
     "modern-normalize": "^2.0.0",

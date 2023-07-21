@@ -1,5 +1,5 @@
 import type { AppProps } from 'next/app';
-import { Passion_One } from '@next/font/google';
+import { Passion_One } from 'next/font/google';
 
 import '@styles/globals.css';
 
