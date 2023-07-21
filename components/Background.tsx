@@ -26,7 +26,7 @@ export default function Background() {
       blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
       quality={50}
       sizes="100vw"
-      style={{ objectFit: 'cover' }}
+      style={{ objectFit: 'cover', zIndex: -1 }}
       fill
       priority
     />
