@@ -1,9 +1,7 @@
-import styles from './Header.module.css';
-
 export default function Header({ title }: { title: string }) {
   return (
-    <header className={styles.header}>
-      <h1 className={styles.title}>{title}</h1>
+    <header className="w-100 p-3">
+      <h1 className="text-4xl md:text-5xl">{title}</h1>
     </header>
   );
 }
