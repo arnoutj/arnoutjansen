@@ -1,4 +1,4 @@
-import { SyntheticEvent, useRef } from 'react';
+import { SyntheticEvent, useRef } from "react";
 
 export default function NewsLetterSignUpForm() {
   const inputRef = useRef<HTMLInputElement | null>(null);
@@ -7,10 +7,10 @@ export default function NewsLetterSignUpForm() {
     e.preventDefault();
 
     try {
-      await fetch('/api/subscribeUser', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: inputRef.current?.value }),
+      await fetch("/api/subscribeUser", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: inputRef.current?.value })
       });
     } catch (e) {
       console.error(e);

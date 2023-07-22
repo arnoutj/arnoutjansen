@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from "next";
 
-import fetch from 'isomorphic-unfetch';
+import fetch from "isomorphic-unfetch";
 
 export default async (req: NextApiRequest, res: NextApiResponse<{ error: string }>) => {
   const { email } = req.body;
@@ -8,7 +8,7 @@ export default async (req: NextApiRequest, res: NextApiResponse<{ error: string 
   console.log({ email });
 
   if (!email) {
-    return res.status(400).json({ error: 'Email is required' });
+    return res.status(400).json({ error: "Email is required" });
   }
 
   try {
@@ -18,7 +18,7 @@ export default async (req: NextApiRequest, res: NextApiResponse<{ error: string 
 
     const data = {
       email_address: email,
-      status: 'subscribed',
+      status: "subscribed"
     };
 
     const response = await fetch(
@@ -28,20 +28,20 @@ export default async (req: NextApiRequest, res: NextApiResponse<{ error: string 
         body: JSON.stringify(data),
         headers: {
           Authorization: `apikey ${API_KEY}`,
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json"
         },
-        method: 'POST',
+        method: "POST"
       }
     );
 
     if (response.status >= 400) {
       return res.status(400).json({
         error: `There was an error subscribing to the newsletter.
-        Hit me up via Instagram and I'll add you the old fashioned way :(.`,
+        Hit me up via Instagram and I'll add you the old fashioned way :(.`
       });
     }
 
-    return res.status(201).json({ error: '' });
+    return res.status(201).json({ error: "" });
   } catch (error: any) {
     return res.status(500).json({ error: error.message || error.toString() });
   }
