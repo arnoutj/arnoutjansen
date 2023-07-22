@@ -18,7 +18,7 @@ export default function NewsLetterSignUpForm() {
   };
 
   return (
-    <form onSubmit={subscribeUser}>
+    <form onSubmit={subscribeUser} className="flex w-full sm:w-96">
       {/* <label htmlFor="email-input" className="form__label">
         Your Best Email
       </label> */}
@@ -31,7 +31,7 @@ export default function NewsLetterSignUpForm() {
         required
         autoCapitalize="off"
         autoCorrect="off"
-        className="w-72 h-12 text-lg text-black rounded-sm outline-none p-2 mr-2"
+        className="w-full h-12 text-lg text-black rounded-sm outline-none p-2 mr-2"
       />
 
       <button

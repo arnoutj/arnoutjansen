@@ -11,6 +11,8 @@ body {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   background-color: #000;
+  width: 100%;
+  height: 100%;
 }
 
 * {
@@ -38,15 +40,6 @@ code {
     Lucida Console,
     Courier New,
     monospace;
-}
-
-.container {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: #000;
 }
 
 h1,

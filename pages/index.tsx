@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <Layout>
       <Header title="Arnout Jansen" />
-      <div className="flex flex-1 flex-col pl-8">
+      <div className="relative flex flex-1 flex-col pl-8 w-full h-full">
         <Socials />
         <div className="flex flex-1 flex-col justify-center">
           <h1 className="text-4xl mb-4 max-w-xs text-amber-300">
@@ -18,22 +18,10 @@ export default function Home() {
           </h1>
           <NewsLetterSignUpForm />
         </div>
-        <h1
-          className="text-amber-300"
-          style={{
-            position: 'absolute',
-            bottom: '5%',
-            left: '50%',
-            transform: 'translate3d(-50%, 0, 0)',
-            fontSize: 40,
-            textAlign: 'center',
-            marginBottom: 30,
-            width: '100%'
-          }}
-        >
-          Coming soon!
-        </h1>
       </div>
+      <h1 className="absolute text-blue-300 text-5xl bottom-16 left-8 lg:text-right mb-0 lg:bottom-4 lg:right-4">
+        More coming soon!
+      </h1>
       <Background />
     </Layout>
   );

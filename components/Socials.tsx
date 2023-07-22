@@ -7,15 +7,9 @@ export default function Socials() {
     <Link
       href="https://www.instagram.com/arnoutjansen_"
       target="blank"
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        color: '#fff',
-        textDecoration: 'none',
-        fontSize: 20
-      }}
+      className="flex items-center text-white text-xl"
     >
-      <Image priority src={instagramIcon} alt="Follow me on Instagram" className="mr-2" />
+      <Image priority src={instagramIcon} alt="Follow me on Instagram" className="w-8 mr-3" />
       <span>Follow me</span>
     </Link>
   );
