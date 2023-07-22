@@ -11,7 +11,7 @@ export default function Home() {
       <Header title="Arnout Jansen" />
       <div style={{ paddingLeft: 30 }}>
         <Socials />
-        <NewsLetterSignUpForm />
+        {/* <NewsLetterSignUpForm /> */}
       </div>
       <h1
         style={{
