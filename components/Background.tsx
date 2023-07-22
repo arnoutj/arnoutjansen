@@ -1,5 +1,5 @@
 import Image from 'next/image';
-// import backgroundImage from '../public/background-1440.png';
+import backgroundImage from '../public/background-1440.png';
 
 const shimmer = (w: number, h: number) => `
 <svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -21,7 +21,8 @@ export default function Background() {
   return (
     <Image
       alt="Copyright 2023 © Arnout Jansen"
-      src="https://arnoutj-website.s3.eu-central-1.amazonaws.com/assets/background-1440.png"
+      src={backgroundImage}
+      // src="https://arnoutj-website.s3.eu-central-1.amazonaws.com/assets/background-1440.png"
       placeholder="blur"
       blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
       quality={50}
