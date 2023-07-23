@@ -1,9 +1,9 @@
-import Head from 'next/head';
-import Header from 'components/Header';
-import Background from '@components/Background';
-import Socials from '@components/Socials';
-import Layout from '@components/Layout';
-import NewsLetterSignUpForm from '@components/NewsletterSignupForm';
+import Head from "next/head";
+import Header from "components/Header";
+import Background from "@components/Background";
+import Socials from "@components/Socials";
+import Layout from "@components/Layout";
+import NewsLetterSignUpForm from "@components/NewsletterSignupForm";
 
 export default function Home() {
   return (

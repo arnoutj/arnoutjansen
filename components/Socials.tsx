@@ -1,5 +1,5 @@
-import InstagramIcon from '../public/icons/instagram.svg';
-import Link from 'next/link';
+import InstagramIcon from "../public/icons/instagram.svg";
+import Link from "next/link";
 
 export default function Socials() {
   return (

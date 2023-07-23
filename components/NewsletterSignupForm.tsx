@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import { SyntheticEvent, useRef, useState } from 'react';
+import Link from "next/link";
+import { SyntheticEvent, useRef, useState } from "react";
 
 export default function NewsLetterSignUpForm() {
   const [hasError, setHasError] = useState(false);
@@ -12,12 +12,12 @@ export default function NewsLetterSignUpForm() {
 
     try {
       setIsLoading(true);
-      const response = await fetch('/api/subscribeUser', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const response = await fetch("/api/subscribeUser", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: inputRef.current?.value })
       });
-      if (response.status !== 201) throw new Error('Could not subscribe');
+      if (response.status !== 201) throw new Error("Could not subscribe");
       setHasSubscribed(true);
     } catch (e) {
       setHasError(true);
@@ -43,11 +43,11 @@ export default function NewsLetterSignUpForm() {
       </h1>
       {hasError && (
         <p className="md:w-96 p-3 mb-4 text-black text-xl bg-red-500 rounded-sm">
-          Oops, something went wrong :( Please contact me via{' '}
+          Oops, something went wrong :( Please contact me via{" "}
           <Link href="mailto:info@arnoutjansen.nl" className="underline hover:no-underline">
             email
-          </Link>{' '}
-          or{' '}
+          </Link>{" "}
+          or{" "}
           <Link href="https://www.instagram.com/arnoutjansen_" target="_blank" className="underline hover:no-underline">
             Instagram
           </Link>
