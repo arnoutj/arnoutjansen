@@ -28,7 +28,7 @@ export default function NewsLetterSignUpForm() {
 
   if (hasSubscribed) {
     return (
-      <div className="p-6 rounded-md text-green-400 bg-black bg-opacity-60 max-w-lg">
+      <div className="p-8 -ml-8 max-w-lg text-green-400 rounded-md bg-black bg-opacity-60">
         <p className="text-4xl mb-2">Thank you for subscribing!</p>
         <span className="block text-xl text-white">Please check your inbox or spam folder for the confirmation :)</span>
       </div>
