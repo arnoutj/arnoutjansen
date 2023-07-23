@@ -37,9 +37,8 @@ export default function NewsLetterSignUpForm() {
 
   return (
     <div className="transition-all duration-200">
-      <h1 className="text-4xl mb-4 max-w-xs text-amber-300">
-        Join the <span className="text-white">mailing list</span>
-        <br /> to hear about my music
+      <h1 className="text-4xl mb-4 max-w-sm text-amber-300">
+        Join the <span className="text-white">mailing list</span> to hear about my music
       </h1>
       {hasError && (
         <p className="md:w-96 p-3 mb-4 text-black text-xl bg-red-500 rounded-sm">
