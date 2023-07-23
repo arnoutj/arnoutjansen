@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <Layout>
       <Header title="Arnout Jansen" />
-      <div className="relative flex flex-1 flex-col pl-8 w-full h-full">
+      <div className="relative flex flex-1 flex-col px-8 w-full h-full">
         <Socials />
         <div className="flex flex-1 flex-col justify-center">
           <h1 className="text-4xl mb-4 max-w-xs text-amber-300">
@@ -19,7 +19,7 @@ export default function Home() {
           <NewsLetterSignUpForm />
         </div>
       </div>
-      <h1 className="absolute text-blue-300 text-5xl bottom-16 left-8 lg:text-right mb-0 lg:bottom-4 lg:right-4">
+      <h1 className="absolute text-blue-300 text-4xl sm:text-5xl bottom-12 left-8 lg:text-center lg:left-1/2 lg:-translate-x-1/2">
         More coming soon!
       </h1>
       <Background />

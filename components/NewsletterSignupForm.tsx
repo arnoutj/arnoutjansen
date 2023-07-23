@@ -19,9 +19,9 @@ export default function NewsLetterSignUpForm() {
 
   return (
     <form onSubmit={subscribeUser} className="flex w-full sm:w-96">
-      {/* <label htmlFor="email-input" className="form__label">
-        Your Best Email
-      </label> */}
+      <label htmlFor="email-input" className="hidden">
+        Your email address
+      </label>
       <input
         type="email"
         id="email-input"
@@ -38,7 +38,7 @@ export default function NewsLetterSignUpForm() {
         type="submit"
         value=""
         name="subscribe"
-        className="bg-amber-300 text-lg text-black rounded-sm px-4 py-2 h-12"
+        className="bg-amber-300 hover:bg-amber-400 text-lg text-black rounded-sm px-4 py-2 h-12"
       >
         Subscribe
       </button>
