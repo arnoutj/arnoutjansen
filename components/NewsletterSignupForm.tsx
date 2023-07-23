@@ -38,7 +38,7 @@ export default function NewsLetterSignUpForm() {
         type="submit"
         value=""
         name="subscribe"
-        className="bg-amber-300 hover:bg-amber-400 text-lg text-black rounded-sm px-4 py-2 h-12"
+        className="bg-amber-300 hover:bg-amber-400 text-lg text-black rounded-sm transition-colors duration-200 px-4 py-2 h-12"
       >
         Subscribe
       </button>

@@ -1,5 +1,4 @@
-import Image from 'next/image';
-import instagramIcon from '../public/icons/instagram.svg';
+import InstagramIcon from '../public/icons/instagram.svg';
 import Link from 'next/link';
 
 export default function Socials() {
@@ -7,9 +6,9 @@ export default function Socials() {
     <Link
       href="https://www.instagram.com/arnoutjansen_"
       target="blank"
-      className="flex items-center text-white text-xl"
+      className="flex items-center text-white hover:text-blue-200 hover:fill-blue-200 text-xl transition-colors duration-200"
     >
-      <Image priority src={instagramIcon} alt="Follow me on Instagram" className="w-8 mr-3" />
+      <InstagramIcon className=" w-8 mr-3" />
       <span>Follow me</span>
     </Link>
   );
