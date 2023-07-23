@@ -12,7 +12,8 @@
     "isomorphic-unfetch": "^4.0.2",
     "next": "^13.4.8",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "vanilla-cookieconsent": "^2.9.1"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.0.1",

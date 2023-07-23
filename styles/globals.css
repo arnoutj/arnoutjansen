@@ -3,6 +3,8 @@
 @tailwind utilities;
 @tailwind variants;
 
+@import "~node_modules/vanilla-cookieconsent/dist/cookieconsent.css";
+
 html,
 body {
   position: fixed;
