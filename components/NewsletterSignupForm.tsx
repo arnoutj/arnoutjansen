@@ -1,47 +1,83 @@
-import { SyntheticEvent, useRef } from 'react';
+import Link from 'next/link';
+import { SyntheticEvent, useRef, useState } from 'react';
 
 export default function NewsLetterSignUpForm() {
+  const [hasError, setHasError] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [hasSubscribed, setHasSubscribed] = useState(false);
   const inputRef = useRef<HTMLInputElement | null>(null);
 
   const subscribeUser = async (e: SyntheticEvent) => {
     e.preventDefault();
 
     try {
-      await fetch('/api/subscribeUser', {
+      setIsLoading(true);
+      const response = await fetch('/api/subscribeUser', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: inputRef.current?.value })
       });
+      if (response.status !== 201) throw new Error('Could not subscribe');
+      setHasSubscribed(true);
     } catch (e) {
-      console.error(e);
+      setHasError(true);
+    } finally {
+      setIsLoading(false);
     }
   };
 
-  return (
-    <form onSubmit={subscribeUser} className="flex w-full sm:w-96">
-      <label htmlFor="email-input" className="hidden">
-        Your email address
-      </label>
-      <input
-        type="email"
-        id="email-input"
-        name="email"
-        placeholder="Your email address"
-        ref={inputRef}
-        required
-        autoCapitalize="off"
-        autoCorrect="off"
-        className="w-full h-12 text-lg text-black rounded-sm outline-none p-2 mr-2"
-      />
+  if (hasSubscribed) {
+    return (
+      <div>
+        <p className="text-4xl text-green-400 mb-2">Thank you for subscribing!</p>
+        <span className="block text-xl text-white">Please check your inbox or spam folder for the confirmation :)</span>
+      </div>
+    );
+  }
 
-      <button
-        type="submit"
-        value=""
-        name="subscribe"
-        className="bg-amber-300 hover:bg-amber-400 text-lg text-black rounded-sm transition-colors duration-200 px-4 py-2 h-12"
-      >
-        Subscribe
-      </button>
-    </form>
+  return (
+    <div className="transition-all duration-200">
+      <h1 className="text-4xl mb-4 max-w-xs text-amber-300">
+        Join the <span className="text-white">mailing list</span>
+        <br /> to hear about my music
+      </h1>
+      {hasError && (
+        <p className="md:w-96 p-3 mb-4 text-black text-xl bg-red-500 rounded-sm">
+          Oops, something went wrong :( Please contact me via{' '}
+          <Link href="mailto:info@arnoutjansen.nl" className="underline hover:no-underline">
+            email
+          </Link>{' '}
+          or{' '}
+          <Link href="https://www.instagram.com/arnoutjansen_" target="_blank" className="underline hover:no-underline">
+            Instagram
+          </Link>
+        </p>
+      )}
+      <form onSubmit={subscribeUser} className="flex w-full sm:w-96">
+        <label htmlFor="email-input" className="hidden">
+          Your email address
+        </label>
+        <input
+          type="email"
+          id="email-input"
+          name="email"
+          placeholder="Your email address"
+          ref={inputRef}
+          required
+          autoCapitalize="off"
+          autoCorrect="off"
+          className="w-full h-12 text-lg text-black rounded-sm outline-none p-2 mr-2"
+          onFocus={() => setHasError(false)}
+        />
+
+        <button
+          type="submit"
+          className="bg-amber-300 hover:bg-amber-400 text-lg text-black rounded-sm transition-colors duration-200 px-4 py-2 h-12"
+          disabled={isLoading}
+        >
+          Subscribe
+        </button>
+      </form>
+    </div>
   );
 }

@@ -12,10 +12,6 @@ export default function Home() {
       <div className="relative flex flex-1 flex-col px-8 w-full h-full">
         <Socials />
         <div className="flex flex-1 flex-col justify-center">
-          <h1 className="text-4xl mb-4 max-w-xs text-amber-300">
-            Join the <span className="text-white">mailing list</span>
-            <br /> to hear about my music
-          </h1>
           <NewsLetterSignUpForm />
         </div>
       </div>
