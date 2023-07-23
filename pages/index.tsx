@@ -15,9 +15,9 @@ export default function Home() {
           <NewsLetterSignUpForm />
         </div>
       </div>
-      <h1 className="absolute text-blue-300 text-4xl sm:text-5xl bottom-12 left-8 lg:text-center lg:left-1/2 lg:-translate-x-1/2">
-        More coming soon!
-      </h1>
+      <div className="rounded sm bg-indigo-600 w-full p-8 bg-opacity-30">
+        <h2 className="text-4xl text-white sm:text-center">More coming soon!</h2>
+      </div>
       <Background />
     </Layout>
   );

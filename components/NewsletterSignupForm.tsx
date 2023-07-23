@@ -28,8 +28,8 @@ export default function NewsLetterSignUpForm() {
 
   if (hasSubscribed) {
     return (
-      <div>
-        <p className="text-4xl text-green-400 mb-2">Thank you for subscribing!</p>
+      <div className="p-6 rounded-md text-green-400 bg-black bg-opacity-60 max-w-lg">
+        <p className="text-4xl mb-2">Thank you for subscribing!</p>
         <span className="block text-xl text-white">Please check your inbox or spam folder for the confirmation :)</span>
       </div>
     );
