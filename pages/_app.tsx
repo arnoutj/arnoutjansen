@@ -5,7 +5,7 @@ import "@styles/globals.css";
 import CookieConsent from "@components/CookieConsent";
 
 export const alegreya = Alegreya({
-  weight: "400",
+  weight: ["400", "600", "700", "800"],
   display: "swap",
   subsets: ["latin"],
   variable: "--font-alegreya"

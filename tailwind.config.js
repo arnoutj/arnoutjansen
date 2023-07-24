@@ -1,3 +1,5 @@
+const plugin = require("tailwindcss/plugin");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -5,8 +7,13 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}"
   ],
-  theme: {
-    extend: {}
-  },
-  plugins: []
+  plugins: [
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        ".text-shadow": {
+          "text-shadow": "black 2px 2px"
+        }
+      });
+    })
+  ]
 };
