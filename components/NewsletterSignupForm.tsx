@@ -29,7 +29,7 @@ export default function NewsLetterSignUpForm() {
   if (hasSubscribed) {
     return (
       <div className="p-8 -ml-8 max-w-lg text-green-400 rounded-md bg-black bg-opacity-60">
-        <p className="text-4xl mb-2">Thank you for subscribing!</p>
+        <p className="text-3xl mb-2">Thank you for subscribing!</p>
         <span className="block text-xl text-white">Please check your inbox or spam folder for the confirmation :)</span>
       </div>
     );
@@ -37,7 +37,7 @@ export default function NewsLetterSignUpForm() {
 
   return (
     <div className="transition-all duration-200">
-      <h1 className="text-4xl mb-4 max-w-sm text-amber-300">
+      <h1 className="text-3xl mb-4 max-w-sm text-amber-300">
         Join the <span className="text-white">mailing list</span> to hear about my music
       </h1>
       {hasError && (
