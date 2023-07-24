@@ -43,7 +43,7 @@ export default function NewsLetterSignUpForm() {
       {hasError && (
         <p className="md:w-96 p-3 mb-4 text-black text-xl bg-red-500 rounded-sm">
           Oops, something went wrong :( Please contact me via{" "}
-          <Link href="mailto:info@arnoutjansen.nl" className="underline hover:no-underline">
+          <Link href="mailto:info@arnoutjansen.com" className="underline hover:no-underline">
             email
           </Link>{" "}
           or{" "}
