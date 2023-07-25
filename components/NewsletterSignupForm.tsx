@@ -71,10 +71,12 @@ export default function NewsLetterSignUpForm() {
 
         <button
           type="submit"
-          className="bg-amber-300 hover:bg-amber-400 text-lg text-black rounded-sm transition-colors duration-200 px-4 py-2 h-12"
+          className={`w-36 bg-amber-300 hover:bg-amber-400 text-lg text-black rounded-sm transition-all duration-200 px-4 py-2 h-12 ${
+            isLoading ? "animate-pulse" : ""
+          }`}
           disabled={isLoading}
         >
-          Subscribe
+          {isLoading ? "Sending..." : "Subscribe"}
         </button>
       </form>
     </div>
