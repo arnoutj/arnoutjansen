@@ -65,7 +65,7 @@ export default function NewsLetterSignUpForm() {
           required
           autoCapitalize="off"
           autoCorrect="off"
-          className="w-full h-12 text-lg text-black rounded-sm outline-none p-2 mr-2"
+          className="w-full h-12 text-lg text-black rounded-sm outline-none px-3 py-2 mr-2"
           onFocus={() => setHasError(false)}
         />
 
