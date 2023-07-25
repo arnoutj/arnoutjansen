@@ -106,6 +106,6 @@
     "skipLibCheck": true /* Skip type checking all .d.ts files. */,
     "plugins": [{ "name": "next" }]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "next.config.js"],
   "exclude": ["node_modules"]
 }
