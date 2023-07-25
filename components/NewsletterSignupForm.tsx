@@ -30,7 +30,7 @@ export default function NewsLetterSignUpForm() {
     return (
       <div className="p-8 -ml-8 max-w-lg text-green-400 rounded-md bg-black bg-opacity-60">
         <p className="text-3xl mb-2">Thank you for subscribing!</p>
-        <span className="block text-xl text-white">Please check your inbox or spam folder for the confirmation :)</span>
+        <span className="block text-xl text-white">You will soon get the next update in your mailbox :)</span>
       </div>
     );
   }
