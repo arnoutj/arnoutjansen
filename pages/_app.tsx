@@ -8,9 +8,9 @@ import GoogleAnalytics from "@components/GoogleAnalytics";
 function Application({ Component, pageProps }: AppProps) {
   return (
     <>
+      <GoogleAnalytics />
       <Component {...pageProps} />
       <CookieConsent />
-      <GoogleAnalytics />
     </>
   );
 }

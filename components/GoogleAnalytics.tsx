@@ -7,10 +7,11 @@ export default function GoogleAnalytics() {
   return (
     <>
       <Script
-        data-cookiecategory="analytics"
+        strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+        data-cookiecategory="analytics"
       />
-      <Script data-cookiecategory="analytics" id="google-analytics">
+      <Script strategy="lazyOnload" data-cookiecategory="analytics" id="google-analytics">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
