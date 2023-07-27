@@ -32,12 +32,13 @@ export default async (req: NextApiRequest, res: NextApiResponse<{ error: string 
         },
         method: "POST"
       }
-    );
+    ).then((res) => res.json());
 
     if (response.status >= 400) {
       return res.status(400).json({
-        error: `There was an error subscribing to the newsletter.
-        Hit me up via Instagram and I'll add you the old fashioned way :(.`
+        // error: `There was an error subscribing to the newsletter:
+        // Hit me up via Instagram and I'll add you the old fashioned way :(.`
+        error: `${response.title}: ${response.detail}`
       });
     }
 
