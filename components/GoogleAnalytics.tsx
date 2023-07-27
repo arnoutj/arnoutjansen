@@ -1,6 +1,6 @@
 import Script from "next/script";
 
-const GA_MEASUREMENT_ID = "SW3PBL3F9W";
+const GA_MEASUREMENT_ID = "G-SW3PBL3F9W";
 
 export default function GoogleAnalytics() {
   if (process.env.NODE_ENV === "development") return null;
