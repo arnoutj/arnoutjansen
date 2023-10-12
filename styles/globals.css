@@ -36,6 +36,7 @@
     padding: 0;
     width: 100%;
     z-index: 1;
+    overflow: auto;
   }
 
   h1,
@@ -50,5 +51,12 @@
     margin-inline-start: unset;
     margin-inline-end: unset;
     font-weight: 400;
+  }
+}
+
+@layer components {
+  .masonry {
+    @apply flex flex-wrap flex-col;
+    height: 1000px;
   }
 }
