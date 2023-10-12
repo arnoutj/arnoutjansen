@@ -53,10 +53,3 @@
     font-weight: 400;
   }
 }
-
-@layer components {
-  .masonry {
-    @apply flex flex-wrap flex-col;
-    height: 1000px;
-  }
-}

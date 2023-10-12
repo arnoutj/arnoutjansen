@@ -1,7 +1,7 @@
 import Socials from "@components/Socials";
 import Layout from "@components/Layout";
 import Background from "@components/Background";
-import PhotoMasonry from "@components/PhotoMasonry";
+import Gallery from "@components/Gallery";
 
 export default function About() {
   return (
@@ -22,7 +22,7 @@ export default function About() {
             inspired by classical and jazz greats, offer a serene escape in a chaotic world. Arnout's music beckons
             introspection and solace, providing a tranquil refuge for modern times.
           </p>
-          <PhotoMasonry />
+          <Gallery />
         </div>
       </div>
       {/* <Background /> */}
