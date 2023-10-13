@@ -8,8 +8,12 @@
     "export": "next export"
   },
   "dependencies": {
+    "@types/imagemin": "^8.0.2",
+    "@types/imagemin-jpegtran": "^5.0.2",
     "cloudinary": "^1.41.0",
     "cypress": "^10.0.3",
+    "imagemin": "^8.0.1",
+    "imagemin-jpegtran": "^7.0.0",
     "isomorphic-unfetch": "^4.0.2",
     "next": "^13.4.8",
     "react": "^18.0.0",

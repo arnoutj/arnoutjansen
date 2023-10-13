@@ -6,6 +6,10 @@ module.exports = {
         hostname: "arnoutj-website.s3.eu-central-1.amazonaws.com",
         port: "",
         pathname: "/assets/**"
+      },
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com"
       }
     ]
   },

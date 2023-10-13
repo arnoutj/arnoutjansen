@@ -1,9 +1,13 @@
+import type { ImageProps } from "utils/types";
+
 import Socials from "@components/Socials";
 import Layout from "@components/Layout";
 import Background from "@components/Background";
 import Gallery from "@components/Gallery";
+import cloudinary from "utils/cloudinary";
+import getBase64ImageUrl from "utils/generateBlurPlaceholder";
 
-export default function About() {
+export default function About({ images }: { images: ImageProps[] }) {
   return (
     <Layout>
       <Socials />
@@ -22,10 +26,40 @@ export default function About() {
             inspired by classical and jazz greats, offer a serene escape in a chaotic world. Arnout's music beckons
             introspection and solace, providing a tranquil refuge for modern times.
           </p>
-          <Gallery />
+          <Gallery images={images} />
         </div>
       </div>
       {/* <Background /> */}
     </Layout>
   );
+}
+
+export async function getStaticProps() {
+  const results = await cloudinary.v2.search
+    .expression(`folder:${process.env.CLOUDINARY_FOLDER}/about/*`)
+    .sort_by("public_id", "asc")
+    .max_results(10)
+    .execute();
+
+  let reducedResults: ImageProps[] = [];
+
+  results.resources.forEach((result: ImageProps, i: number) => {
+    reducedResults.push({
+      ...result,
+      id: i
+    });
+  });
+
+  const blurImagePromises = results.resources.map((image: ImageProps) => getBase64ImageUrl(image));
+  const imagesWithBlurDataUrls = await Promise.all(blurImagePromises);
+
+  reducedResults.forEach((v, i) => {
+    reducedResults[i].blurDataUrl = imagesWithBlurDataUrls[i];
+  });
+
+  return {
+    props: {
+      images: reducedResults
+    }
+  };
 }
