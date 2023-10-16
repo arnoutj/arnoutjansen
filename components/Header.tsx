@@ -10,7 +10,7 @@ export default function Header({ showBackground }: { showBackground: boolean }) 
         showBackground ? "bg-black" : ""
       }`}
     >
-      <h1 className="text-5xl md:text-5xl font-bold text-shadow">Arnout Jansen</h1>
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-shadow">Arnout Jansen</h1>
       <Navigation />
     </header>
   );

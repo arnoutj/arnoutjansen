@@ -12,9 +12,6 @@ export default function Home() {
           <NewsLetterSignUpForm />
         </div>
       </div>
-      <div className="absolute w-full bottom-0 left-0 py-6 px-8 sm:p-8 bg-indigo-600  bg-opacity-30">
-        <h2 className="text-2xl sm:text-3xl text-white sm:text-center">More coming soon!</h2>
-      </div>
       <Background />
     </Layout>
   );
