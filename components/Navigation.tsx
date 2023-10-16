@@ -1,8 +1,7 @@
 import Link, { LinkProps } from "next/link";
-import React, { PropsWithChildren, useState } from "react";
+import React, { PropsWithChildren, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
-
-import useWindowSize from "hooks/useWindowSize";
+import { useOnClickOutside, useWindowSize } from "usehooks-ts";
 
 const navigationItems = [
   { href: "/", title: "Home" },
@@ -33,11 +32,14 @@ function DesktopNavigation() {
 
 function MobileNavigation() {
   const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef(null);
 
   const toggleVisibility = () => setIsVisible(!isVisible);
 
+  useOnClickOutside(ref, () => setIsVisible(false));
+
   return (
-    <nav className="flex justify-between">
+    <nav className="flex justify-between" ref={ref}>
       <button className={`nav-toggle ${isVisible ? "open" : ""}`} onClick={toggleVisibility}>
         <span />
         <span />
