@@ -12,7 +12,7 @@ export default function About({ images }: { images: GalleryImage[] }) {
     <Layout>
       <Socials />
       <div className="flex flex-1 flex-col items-center">
-        <div className="max-w-md md:max-w-3xl">
+        <div className="max-w-md md:max-w-3xl mb-12">
           <h1 className="mt-12 mb-6 text-4xl font-bold text-center">About</h1>
           <p className="mb-4 text-lg">
             Berlin-based musician Arnout Jansen embarked on a musical journey from a young age, discovering the
@@ -47,7 +47,8 @@ export async function getStaticProps() {
     { filename: "jlncy9" },
     { filename: "cg5rmt", colspan: 2 },
     { filename: "qzw2nf" },
-    { filename: "ilmbzw" }
+    { filename: "ilmbzw" },
+    { filename: "zs8503", colspan: 2 }
   ] as const;
 
   const orderedResults = orderedImageFilenames

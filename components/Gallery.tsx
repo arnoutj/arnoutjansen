@@ -9,7 +9,7 @@ export type GalleryImage = {
 
 export default function Gallery({ images }: { images: GalleryImage[] }) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8" style={{ height: 1000 }}>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       {images.map(({ image: { id, blurDataUrl, public_id, format }, colspan }) => (
         <div key={id} className={`flex align-center justify-end md:col-span-${colspan ?? 1}`}>
           <Image
