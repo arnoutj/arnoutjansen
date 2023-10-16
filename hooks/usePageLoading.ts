@@ -10,7 +10,7 @@ NProgress.configure({
   showSpinner: false
 });
 
-export const usePageLoading = () => {
+export default function usePageLoading() {
   const [isPageLoading, setIsPageLoading] = useState(false);
 
   useEffect(() => {
@@ -34,4 +34,4 @@ export const usePageLoading = () => {
   }, []);
 
   return isPageLoading;
-};
+}
