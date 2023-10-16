@@ -52,9 +52,9 @@ function MobileNavigation() {
         }`}
       >
         <ul className="pt-12">
-          {navigationItems.map((item) => (
-            <li className="mb-4 text-right">
-              <NavigationLink href={item.href}>{item.title}</NavigationLink>
+          {navigationItems.map(({ href, title}) => (
+            <li className="mb-4 text-right" key={title}>
+              <NavigationLink href={href}>{title}</NavigationLink>
             </li>
           ))}
         </ul>
