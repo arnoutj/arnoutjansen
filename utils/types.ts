@@ -3,6 +3,7 @@ export type ImageProps = {
   height: string;
   width: string;
   public_id: string;
+  filename: string;
   format: string;
   blurDataUrl?: string;
 };
