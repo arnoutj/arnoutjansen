@@ -37,19 +37,21 @@ function MobileNavigation() {
   const toggleVisibility = () => setIsVisible(!isVisible);
 
   return (
-    <nav className="pt-2 flex justify-between">
-      <button onClick={toggleVisibility}>Menu</button>
+    <nav className="flex justify-between">
+      <button className={`nav-toggle ${isVisible ? "open" : ""}`} onClick={toggleVisibility}>
+        <span />
+        <span />
+        <span />
+        <span />
+      </button>
       <div
-        className={`absolute top-0 w-1/2 h-screen flex flex-col items-end p-12 transition-all duration-200 bg-black ${
-          isVisible ? "right-0" : "-right-1/2"
+        className={`absolute top-0 w-48 h-screen flex flex-col items-end p-8 transition-all duration-200 bg-black bg-opacity-90 ${
+          isVisible ? "right-0" : "-right-48"
         }`}
       >
-        <button onClick={toggleVisibility} className="mb-8 ml-auto">
-          Close
-        </button>
-        <ul>
+        <ul className="pt-12">
           {navigationItems.map((item) => (
-            <li className="mb-8 text-right">
+            <li className="mb-4 text-right">
               <NavigationLink href={item.href}>{item.title}</NavigationLink>
             </li>
           ))}
