@@ -4,8 +4,8 @@ import Socials from "@components/Socials";
 import Layout from "@components/Layout";
 import Background from "@components/Background";
 import Gallery, { GalleryImage } from "@components/Gallery";
-import cloudinary from "utils/cloudinary";
 import getBase64ImageUrl from "utils/generateBlurPlaceholder";
+import getCloudinaryFolder from "utils/cachedImages";
 
 export default function About({ images }: { images: GalleryImage[] }) {
   return (
@@ -35,11 +35,7 @@ export default function About({ images }: { images: GalleryImage[] }) {
 }
 
 export async function getStaticProps() {
-  const results = await cloudinary.v2.search
-    .expression(`folder:${process.env.CLOUDINARY_FOLDER}/about/*`)
-    .sort_by("public_id", "asc")
-    .max_results(10)
-    .execute();
+  const results = await getCloudinaryFolder("about");
 
   const orderedImageFilenames = [
     { filename: "yy4prr", colspan: 2 },
