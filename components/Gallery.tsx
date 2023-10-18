@@ -3,15 +3,15 @@ import Image from "next/image";
 
 export type GalleryImage = {
   filename: string;
-  colspan?: number;
+  twoColspan?: boolean;
   image: ImageProps;
 };
 
 export default function Gallery({ images }: { images: GalleryImage[] }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-      {images.map(({ image: { blurDataUrl, public_id, format }, colspan }) => (
-        <div key={public_id} className={`flex align-center justify-end md:col-span-${colspan ?? 1}`}>
+      {images.map(({ image: { blurDataUrl, public_id, format }, twoColspan }) => (
+        <div key={public_id} className={`flex align-center justify-end ${twoColspan ? "md:col-span-2" : ""}`}>
           <Image
             alt="© Arnout Jansen"
             placeholder="blur"

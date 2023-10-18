@@ -37,13 +37,13 @@ export async function getStaticProps() {
   const results = await getCloudinaryFolder("about");
 
   const orderedImageFilenames = [
-    { filename: "yy4prr", colspan: 2 },
+    { filename: "yy4prr", twoColspan: true },
     { filename: "pskdfv" },
     { filename: "jlncy9" },
-    { filename: "cg5rmt", colspan: 2 },
+    { filename: "cg5rmt", twoColspan: true },
     { filename: "qzw2nf" },
     { filename: "ilmbzw" },
-    { filename: "zs8503", colspan: 2 }
+    { filename: "zs8503", twoColspan: true }
   ] as const;
 
   const orderedResults = orderedImageFilenames
