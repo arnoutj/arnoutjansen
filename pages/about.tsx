@@ -10,7 +10,6 @@ import getCloudinaryFolder from "utils/cachedImages";
 export default function About({ images }: { images: GalleryImage[] }) {
   return (
     <Layout>
-      <Socials />
       <div className="flex flex-1 flex-col items-center">
         <div className="max-w-md md:max-w-3xl mb-12">
           <h1 className="mt-12 mb-6 text-4xl font-bold text-center">About</h1>

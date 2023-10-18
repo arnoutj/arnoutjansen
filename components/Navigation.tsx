@@ -2,6 +2,8 @@ import Link, { LinkProps } from "next/link";
 import React, { PropsWithChildren, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { useOnClickOutside, useWindowSize } from "usehooks-ts";
+import Socials from "./Socials";
+import { NAVIGATION_BREAKPOINT } from "./Layout";
 
 const navigationItems = [
   { href: "/", title: "Home" },
@@ -10,9 +12,10 @@ const navigationItems = [
   { href: "/newsletter", title: "Newsletter" },
   { href: "/contact", title: "Contact" }
 ];
+
 export default function Navigation() {
   const windowSize = useWindowSize();
-  if (windowSize.width < 900) return <MobileNavigation />;
+  if (windowSize.width < NAVIGATION_BREAKPOINT) return <MobileNavigation />;
   return <DesktopNavigation />;
 }
 
@@ -20,9 +23,9 @@ function DesktopNavigation() {
   return (
     <nav className="pt-2 flex justify-between">
       <ul>
-        {navigationItems.map((item) => (
-          <li className="mr-8 inline">
-            <NavigationLink href={item.href}>{item.title}</NavigationLink>
+        {navigationItems.map(({ href, title }) => (
+          <li className="ml-8 inline" key={title}>
+            <NavigationLink href={href}>{title}</NavigationLink>
           </li>
         ))}
       </ul>
@@ -51,13 +54,15 @@ function MobileNavigation() {
           isVisible ? "right-0" : "-right-48"
         }`}
       >
-        <ul className="pt-12">
-          {navigationItems.map(({ href, title}) => (
+        <ul className="pt-14">
+          {navigationItems.map(({ href, title }) => (
             <li className="mb-4 text-right" key={title}>
               <NavigationLink href={href}>{title}</NavigationLink>
             </li>
           ))}
         </ul>
+
+        <Socials />
       </div>
     </nav>
   );
