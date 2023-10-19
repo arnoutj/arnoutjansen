@@ -2,12 +2,20 @@ import type { ImageProps } from "utils/types";
 
 import Socials from "@components/Socials";
 import Layout from "@components/Layout";
-import Background from "@components/Background";
+import Background from "@components/BackgroundImage";
 import Gallery, { GalleryImage } from "@components/Gallery";
 import getBase64ImageUrl from "utils/generateBlurPlaceholder";
 import getCloudinaryFolder from "utils/cachedImages";
+import getCloudinaryImage from "utils/getCloudinaryImage";
+import BackgroundImage from "@components/BackgroundImage";
 
-export default function About({ images }: { images: GalleryImage[] }) {
+export default function About({
+  backgroundImage,
+  images
+}: {
+  backgroundImage: { src: string; blurDataUrl: string };
+  images: GalleryImage[];
+}) {
   return (
     <Layout>
       <div className="flex flex-1 flex-col items-center">
@@ -28,13 +36,14 @@ export default function About({ images }: { images: GalleryImage[] }) {
           <Gallery images={images} />
         </div>
       </div>
-      {/* <Background /> */}
+      <BackgroundImage image={backgroundImage} />
     </Layout>
   );
 }
 
 export async function getStaticProps() {
   const results = await getCloudinaryFolder("about");
+  const backgroundImage = await getCloudinaryImage("website/backgrounds/axr6zk");
 
   const orderedImageFilenames = [
     { filename: "yy4prr", twoColspan: true },
@@ -54,7 +63,7 @@ export async function getStaticProps() {
     }))
     .filter((g) => !!g.image);
 
-  const blurImagePromises = results.resources.map((image: ImageProps) => getBase64ImageUrl(image));
+  const blurImagePromises = results.resources.map((image: ImageProps) => getBase64ImageUrl(image.public_id));
   const imagesWithBlurDataUrls = await Promise.all(blurImagePromises);
 
   orderedResults.forEach((v, i) => {
@@ -63,6 +72,7 @@ export async function getStaticProps() {
 
   return {
     props: {
+      backgroundImage,
       images: orderedResults
     }
   };
