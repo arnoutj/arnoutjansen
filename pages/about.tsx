@@ -1,19 +1,18 @@
 import type { ImageProps } from "utils/types";
+import type { CloudinaryImageUrl } from "utils/getCloudinaryImageUrl";
 
-import Socials from "@components/Socials";
 import Layout from "@components/Layout";
-import Background from "@components/BackgroundImage";
 import Gallery, { GalleryImage } from "@components/Gallery";
-import getBase64ImageUrl from "utils/generateBlurPlaceholder";
+import getBase64ImageUrl from "utils/getBase64ImageUrl";
 import getCloudinaryFolder from "utils/cachedImages";
-import getCloudinaryImage from "utils/getCloudinaryImage";
+import getCloudinaryImage from "utils/getCloudinaryImageUrl";
 import BackgroundImage from "@components/BackgroundImage";
 
 export default function About({
   backgroundImage,
   images
 }: {
-  backgroundImage: { src: string; blurDataUrl: string };
+  backgroundImage: CloudinaryImageUrl;
   images: GalleryImage[];
 }) {
   return (

@@ -1,7 +1,7 @@
-import type { CloudinaryImage } from "utils/getCloudinaryImage";
+import type { CloudinaryImageUrl } from "utils/getCloudinaryImageUrl";
 import BlurImage from "./BlurImage";
 
-export default function BackgroundImage({ image }: { image: CloudinaryImage }) {
+export default function BackgroundImage({ image }: { image: CloudinaryImageUrl }) {
   return (
     <div className="-z-10 fixed w-full h-full top-0 left-0">
       <BlurImage
