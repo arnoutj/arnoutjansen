@@ -1,10 +1,9 @@
 import { useState } from "react";
 
 import Head from "next/head";
-import { alegreyaFont } from "utils/fonts";
+import { useWindowSize } from "usehooks-ts";
 
 import Header from "./Header";
-import { useWindowSize } from "usehooks-ts";
 import Socials from "./Socials";
 
 const SCROLL_OFFSET = 10;
@@ -20,7 +19,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <div className={`${alegreyaFont.className} h-full flex flex-col justify-center items-center bg-black`}>
+    <div className={`h-full flex flex-col justify-center items-center bg-black`}>
       <Head>
         <title>Arnout Jansen</title>
         <link rel="icon" href="/favicon.ico" />

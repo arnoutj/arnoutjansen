@@ -12,6 +12,7 @@ function Application({ Component, pageProps }: AppProps) {
 
   return (
     <>
+      {/* Ensure that fonts are preloaded for all routes */}
       <style jsx global>{`
         html {
           font-family: ${alegreyaFont.style.fontFamily};
