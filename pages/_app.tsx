@@ -1,5 +1,6 @@
 import type { AppProps } from "next/app";
 
+import { alegreyaFont, aliceFont } from "utils/fonts";
 import CookieConsent from "@components/CookieConsent";
 import GoogleAnalytics from "@components/GoogleAnalytics";
 import usePageLoading from "hooks/usePageLoading";
@@ -11,6 +12,15 @@ function Application({ Component, pageProps }: AppProps) {
 
   return (
     <>
+      <style jsx global>{`
+        html {
+          font-family: ${alegreyaFont.style.fontFamily};
+        }
+
+        .logo {
+          font-family: ${aliceFont.style.fontFamily};
+        }
+      `}</style>
       <GoogleAnalytics />
       <Component {...pageProps} />
       <CookieConsent />
