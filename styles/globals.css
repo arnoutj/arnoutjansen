@@ -111,7 +111,7 @@
 
 @layer components {
   .button {
-    @apply text-lg rounded-sm transition-all duration-200 h-12 py-2 px-6;
+    @apply cursor-pointer text-lg rounded-sm transition-all duration-200 h-12 py-2 px-6;
   }
 
   .primary-button {
