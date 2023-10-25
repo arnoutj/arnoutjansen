@@ -4,19 +4,13 @@ import Layout from "@components/Layout";
 import getCloudinaryImage from "utils/getCloudinaryImageUrl";
 import BackgroundImage from "@components/BackgroundImage";
 
-export default function Contact({ backgroundImage }: { backgroundImage: CloudinaryImageUrl }) {
+export default function Music({ backgroundImage }: { backgroundImage: CloudinaryImageUrl }) {
   return (
-    <Layout pageTitle="Contact">
+    <Layout pageTitle="Music">
       <div className="flex flex-1 flex-col items-center">
         <div className="max-w-md md:max-w-3xl mb-12">
-          <h1 className="mt-12 mb-6 text-4xl font-bold text-center">Contact</h1>
-          <p className="text-lg text-center">
-            For any inquiries please contact me via email:
-            <br />
-            <a className="underline text-amber-400" href="mailto:info@arnoutjansen.com">
-              info@arnoutjansen.com
-            </a>
-          </p>
+          <h1 className="mt-12 mb-6 text-4xl font-bold text-center">Music</h1>
+          <p className="text-lg text-center">Coming soon!</p>
         </div>
       </div>
       <BackgroundImage image={backgroundImage} />

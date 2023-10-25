@@ -7,7 +7,7 @@ import getCloudinaryImage from "utils/getCloudinaryImageUrl";
 
 export default function Home({ backgroundImage }: { backgroundImage: CloudinaryImageUrl }) {
   return (
-    <Layout>
+    <Layout pageTitle="Welcome">
       <div className="relative flex flex-1 flex-col w-full h-full">
         <div className="flex flex-1 flex-col justify-center">
           <NewsLetterSignUpForm />

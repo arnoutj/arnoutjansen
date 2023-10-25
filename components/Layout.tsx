@@ -9,7 +9,7 @@ import Socials from "./Socials";
 const SCROLL_OFFSET = 10;
 export const NAVIGATION_BREAKPOINT = 1024;
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default function Layout({ children, pageTitle }: { children: React.ReactNode; pageTitle: string }) {
   const windowSize = useWindowSize();
   const [hasScrolled, setHasScrolled] = useState(false);
 
@@ -21,7 +21,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className={`h-full flex flex-col justify-center items-center bg-black`}>
       <Head>
-        <title>Arnout Jansen</title>
+        <title>Arnout Jansen - {pageTitle}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header showBackground={hasScrolled} />
