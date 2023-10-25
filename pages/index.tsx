@@ -13,13 +13,13 @@ export default function Home({ backgroundImage }: { backgroundImage: CloudinaryI
           <NewsLetterSignUpForm />
         </div>
       </div>
-      <BackgroundImage image={backgroundImage} />
+      <BackgroundImage image={backgroundImage} quality={90} />
     </Layout>
   );
 }
 
 export async function getStaticProps() {
-  const backgroundImage = await getCloudinaryImage("website/backgrounds/moxltw");
+  const backgroundImage = await getCloudinaryImage("website/backgrounds/tlwtbs");
 
   return {
     props: { backgroundImage }
