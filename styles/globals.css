@@ -17,6 +17,7 @@
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     background-color: #000;
+    font-family: "Alegreya", serif;
   }
   * {
     box-sizing: border-box;
