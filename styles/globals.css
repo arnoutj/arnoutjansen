@@ -108,3 +108,16 @@
     }
   }
 }
+
+@layer components {
+  .button {
+    @apply text-lg rounded-sm transition-all duration-200 h-12 py-2 px-6;
+  }
+
+  .primary-button {
+    @apply button bg-amber-300 hover:bg-amber-400 text-black;
+  }
+  .secondary-button {
+    @apply button bg-white hover:bg-gray-100 text-black;
+  }
+}

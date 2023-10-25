@@ -5,13 +5,15 @@ import BlurImage from "./BlurImage";
 
 export default function BackgroundImage({
   image,
-  quality
+  quality,
+  className
 }: {
   image: CloudinaryImageUrl;
   quality?: ImageProps["quality"];
+  className?: string;
 }) {
   return (
-    <div className="-z-10 fixed w-full h-full top-0 left-0">
+    <div className={`-z-10 fixed w-full h-full top-0 left-0 ${className}`}>
       <BlurImage
         alt="Copyright 2023 © Arnout Jansen"
         src={image.src ?? ""}
