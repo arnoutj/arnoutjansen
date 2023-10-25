@@ -3,14 +3,14 @@ import type { CloudinaryImageUrl } from "utils/getCloudinaryImageUrl";
 import Layout from "@components/Layout";
 import BackgroundImage from "@components/BackgroundImage";
 import getCloudinaryImage from "utils/getCloudinaryImageUrl";
-import { ReleaseCTA } from "../components/ReleaseCTA";
+import PresaveCTA from "@components/PresaveCTA";
 
 export default function Home({ backgroundImage }: { backgroundImage: CloudinaryImageUrl }) {
   return (
     <Layout pageTitle="Welcome">
       <div className="relative flex flex-1 flex-col w-full h-full">
         <div className="flex flex-1 flex-col items-center justify-center">
-          <ReleaseCTA title="Retrace" />
+          <PresaveCTA title="Retrace" />
         </div>
       </div>
       <BackgroundImage image={backgroundImage} quality={90} className="opacity-20" />
