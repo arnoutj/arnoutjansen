@@ -5,14 +5,18 @@ import getCloudinaryImage from "utils/getCloudinaryImageUrl";
 import BackgroundImage from "@components/BackgroundImage";
 import PresaveCTA from "@components/PresaveCTA";
 
-export default function Music({ backgroundImage }: { backgroundImage: CloudinaryImageUrl }) {
+export default function Music({
+  backgroundImage,
+  presaveCTAImage
+}: {
+  backgroundImage: CloudinaryImageUrl;
+  presaveCTAImage: CloudinaryImageUrl;
+}) {
   return (
     <Layout pageTitle="Music">
       <div className="flex flex-1 flex-col items-center justify-center">
         <div className="max-w-md md:max-w-3xl mb-12 pt-12">
-          {/* <h1 className="mt-12 mb-6 text-4xl font-bold text-center">Music</h1>
-          <p className="text-lg text-center">Coming soon!</p> */}
-          <PresaveCTA title="Retrace" />
+          <PresaveCTA title="Retrace" image={presaveCTAImage} />
         </div>
       </div>
       <BackgroundImage image={backgroundImage} />
@@ -22,8 +26,8 @@ export default function Music({ backgroundImage }: { backgroundImage: Cloudinary
 
 export async function getStaticProps() {
   const backgroundImage = await getCloudinaryImage("website/backgrounds/ar14yq");
-
+  const presaveCTAImage = await getCloudinaryImage("website/artwork/Cover_2_ajqjof");
   return {
-    props: { backgroundImage }
+    props: { backgroundImage, presaveCTAImage }
   };
 }
