@@ -3,7 +3,7 @@ import type { CloudinaryImageUrl } from "utils/getCloudinaryImageUrl";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function PresaveCTA({ title, image }: { title: string; image: CloudinaryImageUrl }) {
+export default function PresaveCTA({ title, image, url }: { title: string; image: CloudinaryImageUrl; url: string }) {
   return (
     <div className="text-center">
       <h1 className="text-4xl md:text-5xl font-extrabold mb-8">'{title}' is coming soon!</h1>
@@ -19,7 +19,7 @@ export default function PresaveCTA({ title, image }: { title: string; image: Clo
         />
       </div>
       <div className="flex justify-center">
-        <Link className="primary-button mr-4" href="#" target="_blank" title={`Presave ${title}`}>
+        <Link className="primary-button mr-4" href={url} target="_blank" title={`Presave ${title}`}>
           Pre-Save Now!
         </Link>
       </div>

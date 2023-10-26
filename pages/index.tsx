@@ -5,6 +5,8 @@ import BackgroundImage from "@components/BackgroundImage";
 import getCloudinaryImage from "utils/getCloudinaryImageUrl";
 import PresaveCTA from "@components/PresaveCTA";
 
+import { upcomingRelease } from "data/music";
+
 export default function Home({
   backgroundImage,
   presaveCTAImage
@@ -16,7 +18,7 @@ export default function Home({
     <Layout pageTitle="Welcome">
       <div className="relative flex flex-1 flex-col w-full h-full">
         <div className="flex flex-1 flex-col items-center justify-center">
-          <PresaveCTA title="Retrace" image={presaveCTAImage} />
+          <PresaveCTA title={upcomingRelease.title} url={upcomingRelease.url} image={presaveCTAImage} />
         </div>
       </div>
       <BackgroundImage image={backgroundImage} quality={90} className="opacity-20" />
@@ -26,7 +28,7 @@ export default function Home({
 
 export async function getStaticProps() {
   const backgroundImage = await getCloudinaryImage("website/backgrounds/cxv6ni"); // dj1gwd
-  const presaveCTAImage = await getCloudinaryImage("website/artwork/Cover_2_ajqjof");
+  const presaveCTAImage = await getCloudinaryImage(upcomingRelease.cloudinaryImagePath);
   return {
     props: { backgroundImage, presaveCTAImage }
   };
