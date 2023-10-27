@@ -8,6 +8,8 @@ import BackgroundImage from "@components/BackgroundImage";
 import PresaveCTA from "@components/PresaveCTA";
 import { releases, upcomingRelease } from "data/music";
 import cloudinary from "utils/cloudinary";
+import { aliceFont } from "utils/fonts";
+import SongCover from "@components/SongCover";
 
 export default function Music({
   backgroundImage,
@@ -25,19 +27,15 @@ export default function Music({
           <PresaveCTA title={upcomingRelease.title} url={upcomingRelease.url} image={presaveCTAImage} />
         </div>
       </section>
-      <section className="section bg-black bg-opacity-50 py-16">
-        <div className="w-full grid sm:grid-cols-2">
+      <section className="section bg-black bg-opacity-80 py-16">
+        <div className="w-full md:max-w-4xl grid sm:grid-cols-2">
           {releasesWithImages.map(({ title, image }) => (
-            <div key={title} className="p-8">
-              <div className="relative aspect-square w-full mb-8">
-                <Image
-                  src={image.src ?? ""}
-                  blurDataURL={image.blurDataUrl}
-                  alt={title}
-                  sizes="500px"
-                  fill
-                  style={{ objectFit: "contain" }}
-                />
+            <div key={title} className="p-8 text-center">
+              <h2 className={`${aliceFont.className} text-3xl mb-4`}>{title}</h2>
+              <SongCover image={image} alt={title} className="mb-8" />
+              <div>
+                <button className="primary-button mr-4">Buy</button>
+                <button className="secondary-button">Listen</button>
               </div>
             </div>
           ))}
