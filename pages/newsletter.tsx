@@ -8,11 +8,11 @@ import getCloudinaryImage from "utils/getCloudinaryImageUrl";
 export default function Newsletter({ backgroundImage }: { backgroundImage: CloudinaryImageUrl }) {
   return (
     <Layout pageTitle="Welcome">
-      <div className="relative flex flex-1 flex-col w-full h-full">
-        <div className="flex flex-1 flex-col justify-end pb-12 md:justify-center 2xl:items-center md:pt-24">
+      <section className="section">
+        <div className="w-full flex flex-1 flex-col justify-end pb-12 md:pb-0 md:justify-center 2xl:items-center md:pt-24">
           <NewsLetterSignUpForm />
         </div>
-      </div>
+      </section>
       <BackgroundImage image={backgroundImage} quality={90} />
     </Layout>
   );

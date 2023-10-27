@@ -18,15 +18,17 @@ export default function Layout({ children, pageTitle }: { children: React.ReactN
     if (newHasScrolled != hasScrolled) setHasScrolled(newHasScrolled);
   };
 
+  const title = `Arnout Jansen - ${pageTitle}`;
+
   return (
     <div className={`h-full flex flex-col justify-center items-center bg-black`}>
       <Head>
-        <title>Arnout Jansen - {pageTitle}</title>
+        <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header showBackground={hasScrolled} />
       <main onScroll={handleScroll}>
-        <div className="relative flex flex-1 flex-col px-8 pt-24 w-full h-full">{children}</div>
+        <div className="relative w-full">{children}</div>
         {windowSize.width >= NAVIGATION_BREAKPOINT ? <Socials className="fixed bottom-8 right-8 flex-col" /> : null}
       </main>
     </div>

@@ -7,7 +7,7 @@ export default function Live() {
 
   return (
     <Layout pageTitle="Live">
-      <div className="flex flex-1 flex-col items-center pt-12">
+      <section className="section">
         {/* <h1 className="mt-12 mb-6 text-4xl font-bold text-center">Live shows</h1> */}
         {loadingSongkick ? "Loading dates..." : null}
         <a
@@ -26,7 +26,7 @@ export default function Live() {
           data-past-events-offtour="off"
           data-remind-me="off"
         ></a>
-      </div>
+      </section>
       <Script src="//widget-app.songkick.com/injector/10309075" onLoad={() => setLoadingSongKick(false)} />
     </Layout>
   );

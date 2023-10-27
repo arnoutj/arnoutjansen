@@ -110,6 +110,10 @@
 }
 
 @layer components {
+  .section {
+    @apply w-full h-screen flex flex-1 flex-col items-center pt-24 px-8;
+  }
+
   .button {
     @apply cursor-pointer text-lg rounded-sm transition-all duration-200 h-12 py-2 px-6;
   }

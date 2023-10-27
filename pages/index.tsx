@@ -16,11 +16,9 @@ export default function Home({
 }) {
   return (
     <Layout pageTitle="Welcome">
-      <div className="relative flex flex-1 flex-col w-full h-full">
-        <div className="flex flex-1 flex-col items-center justify-center">
-          <PresaveCTA title={upcomingRelease.title} url={upcomingRelease.url} image={presaveCTAImage} />
-        </div>
-      </div>
+      <section className="section justify-center">
+        <PresaveCTA title={upcomingRelease.title} url={upcomingRelease.url} image={presaveCTAImage} />
+      </section>
       <BackgroundImage image={backgroundImage} quality={90} className="opacity-20" />
     </Layout>
   );
