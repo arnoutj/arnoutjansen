@@ -7,7 +7,7 @@ import SpotifyIcon from "../public/icons/spotify.svg";
 import Link from "next/link";
 
 const linkClassname =
-  "w-5 h-5 ml-3 lg:ml-0 lg:w-7 lg:h-7 mt-6 flex items-center text-white hover:text-indigo-400 hover:fill-indigo-400 transition-colors duration-200";
+  "w-6 h-6 ml-3 lg:ml-0 lg:w-7 lg:h-7 mt-6 flex items-center text-white hover:text-indigo-400 hover:fill-indigo-400 transition-colors duration-200";
 
 export default function Socials({ className }: { className?: string }) {
   return (
