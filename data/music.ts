@@ -1,9 +1,9 @@
 const artworkCloudinaryImagePath = "website/artwork";
 
 export const upcomingRelease = {
-  title: "UPCOMING RELEASE",
+  title: "Retrace",
   cloudinaryImagePath: `${artworkCloudinaryImagePath}/Cover_2_ajqjof`,
-  url: "#"
+  url: "https://distrokid.com/hyperfollow/arnoutjansen/retrace"
 } as const;
 
 export const releases = [
