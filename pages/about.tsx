@@ -17,7 +17,7 @@ export default function About({
 }) {
   return (
     <Layout pageTitle="About">
-      <section className="section pt-24">
+      <section className="section">
         <div className="max-w-md md:max-w-3xl mb-12">
           <h1 className="mt-12 mb-6 text-4xl font-bold text-center">About</h1>
           <p className="mb-4 text-lg">
