@@ -111,7 +111,8 @@
 
 @layer components {
   .section {
-    @apply w-full min-h-screen flex flex-1 flex-col items-center pt-24 px-8;
+    @apply w-full flex flex-1 flex-col items-center pt-24 px-8;
+    height: 100dvh;
   }
 
   .button {
