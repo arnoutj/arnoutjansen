@@ -21,7 +21,12 @@ export default function Socials({ className }: { className?: string }) {
       {/* <Link href="https://www.facebook.com/arnoutjansenmusic" target="blank" title="Facebook" className={linkClassname}>
         <FacebookIcon className="w-full h-full" alt="Facebook" />
       </Link> */}
-      <Link href="#" target="blank" title="Spotify" className={linkClassname}>
+      <Link
+        href="https://open.spotify.com/artist/1prY9tOCh2l9pRAWbDK47v"
+        target="blank"
+        title="Spotify"
+        className={linkClassname}
+      >
         <SpotifyIcon className="w-full h-full" alt="Spotify" />
       </Link>
       <Link href="https://arnoutjansen.bandcamp.com" target="blank" title="Bandcamp" className={linkClassname}>
