@@ -27,7 +27,7 @@ export default function Music({
           <PresaveCTA title={upcomingRelease.title} url={upcomingRelease.url} image={presaveCTAImage} />
         </div>
       </section>
-      <section className="section bg-black bg-opacity-80 py-16">
+      {/* <section className="section bg-black bg-opacity-80 py-16">
         <div className="w-full md:max-w-4xl grid sm:grid-cols-2">
           {releasesWithImages.map(({ title, image }) => (
             <div key={title} className="p-8 text-center">
@@ -40,7 +40,7 @@ export default function Music({
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
       <BackgroundImage image={backgroundImage} />
     </Layout>
   );
