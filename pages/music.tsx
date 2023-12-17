@@ -10,6 +10,7 @@ import { releases, upcomingRelease } from "data/music";
 import cloudinary from "utils/cloudinary";
 import { aliceFont } from "utils/fonts";
 import SongCover from "@components/SongCover";
+import ReleaseCTA from "@components/ReleaseCTA";
 
 export default function Music({
   backgroundImage,
@@ -24,7 +25,12 @@ export default function Music({
     <Layout pageTitle="Music">
       <section className="section justify-center">
         <div className="flex flex-col w-full md:max-w-4xl mb-12 pt-12">
-          <PresaveCTA title={upcomingRelease.title} url={upcomingRelease.url} image={presaveCTAImage} />
+          {/* <PresaveCTA title={upcomingRelease.title} url={upcomingRelease.url} image={presaveCTAImage} /> */}
+          <ReleaseCTA
+            title={releasesWithImages[0].title}
+            url={releasesWithImages[0].url}
+            image={releasesWithImages[0].image}
+          />
         </div>
       </section>
       {/* <section className="section bg-black bg-opacity-80 py-16">

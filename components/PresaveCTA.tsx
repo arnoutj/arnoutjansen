@@ -1,6 +1,5 @@
 import type { CloudinaryImageUrl } from "utils/getCloudinaryImageUrl";
 
-import Image from "next/image";
 import Link from "next/link";
 import SongCover from "./SongCover";
 
