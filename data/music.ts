@@ -3,14 +3,14 @@ const artworkCloudinaryImagePath = "website/artwork";
 export const upcomingRelease = {
   title: "Retrace",
   cloudinaryImagePath: `${artworkCloudinaryImagePath}/Cover_2_ajqjof`,
-  url: "https://distrokid.com/hyperfollow/arnoutjansen/retrace"
+  url: "https://tr.ee/iDi_Mqbwdy"
 } as const;
 
 export const releases = [
   {
     title: "Retrace",
     cloudinaryImagePath: `${artworkCloudinaryImagePath}/Cover_2_ajqjof`,
-    url: "https://koji.to/k/9RYw"
+    url: "https://tr.ee/iDi_Mqbwdy"
   }
   // {
   //   title: "Release 1",
