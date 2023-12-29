@@ -21,7 +21,7 @@ export default function About({
         <div className="max-w-md md:max-w-3xl mb-12">
           <h1 className="mt-12 mb-6 text-4xl font-bold text-center">About</h1>
           <p className="mb-4 text-lg">
-            Berlin-based musician Arnout Jansen embarked on a musical journey from a young age, discovering the
+            Dutch pianist and composer Arnout Jansen embarked on a musical journey from a young age, discovering the
             enchanting world of the piano. His exploration began with classical training and evolved into forays into
             jazz and electronic music, creating a diverse musical tapestry.
           </p>
