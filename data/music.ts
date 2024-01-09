@@ -1,9 +1,9 @@
 const artworkCloudinaryImagePath = "website/artwork";
 
 export const upcomingRelease = {
-  title: "Retrace",
-  cloudinaryImagePath: `${artworkCloudinaryImagePath}/Cover_2_ajqjof`,
-  url: "https://tr.ee/iDi_Mqbwdy"
+  title: "Astray",
+  cloudinaryImagePath: `${artworkCloudinaryImagePath}/Cover_4_vludhv`,
+  url: "https://distrokid.com/hyperfollow/arnoutjansen/astray"
 } as const;
 
 export const releases = [
@@ -13,8 +13,8 @@ export const releases = [
     url: "https://tr.ee/iDi_Mqbwdy"
   }
   // {
-  //   title: "Release 1",
-  //   cloudinaryImagePath: `${artworkCloudinaryImagePath}/Cover_1_jllseq`
+  //   title: "Astray",
+  //   cloudinaryImagePath: `${artworkCloudinaryImagePath}/Cover_4_vludhv`
   // }
   // {
   //   title: "Release 2",
