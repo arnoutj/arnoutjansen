@@ -23,14 +23,14 @@ export default function Music({
 }) {
   return (
     <Layout pageTitle="Music">
-      <section className="section justify-center">
+      {/* <section className="section justify-center">
         <div className="flex flex-col w-full md:max-w-4xl mb-12 pt-12">
           <PresaveCTA title={upcomingRelease.title} url={upcomingRelease.url} image={presaveCTAImage} />
-          {/* <ReleaseCTA
+          <ReleaseCTA
             title={releasesWithImages[0].title}
             url={releasesWithImages[0].url}
             image={releasesWithImages[0].image}
-          /> */}
+          />
         </div>
       </section>
       <section className="section bg-black bg-opacity-80 py-16">
@@ -41,21 +41,16 @@ export default function Music({
             image={releasesWithImages[0].image}
           />
         </div>
-      </section>
-      {/* <section className="section bg-black bg-opacity-80 py-16">
-        <div className="w-full md:max-w-4xl grid sm:grid-cols-2">
-          {releasesWithImages.map(({ title, image }) => (
-            <div key={title} className="p-8 text-center">
-              <h2 className={`${aliceFont.className} text-3xl mb-4`}>{title}</h2>
-              <SongCover image={image} alt={title} className="mb-8" />
-              <div>
-                <button className="primary-button mr-4">Buy</button>
-                <button className="secondary-button">Listen</button>
-              </div>
+      </section> */}
+      <section className="section">
+        <div className="w-full md:max-w-4xl grid sm:grid-cols-2 mb-12 pt-12">
+          {releasesWithImages.map((props) => (
+            <div key={props.title} className="p-8 text-center">
+              <ReleaseCTA {...props} hasSmallTitle />
             </div>
           ))}
         </div>
-      </section> */}
+      </section>
       <BackgroundImage image={backgroundImage} />
     </Layout>
   );
